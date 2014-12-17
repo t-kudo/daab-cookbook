@@ -6,16 +6,16 @@ provisioner:
   name: chef_solo
 
 platforms:
+  - name: debian-7.7
   - name: centos-6.4
   - name: ubuntu-14.04-LTS
     driver_config:
       box: canonical-ubuntu-12.10
       box_url: https://cloud-images.ubuntu.com/vagrant/trusty/trusty-server-cloudimg-amd64-juju-vagrant-disk1.box
       require_chef_omnibus: 11.4.0
-    run_list:
-    - recipe[apt]
 suites:
   - name: default
     run_list:
       - recipe[daab::default]
     attributes:
+
