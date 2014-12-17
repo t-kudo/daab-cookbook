@@ -44,6 +44,8 @@ directory node['daab']['install_dir'] do
   mode 0755
 end
 
+include_recipe "zip"
+
 ark "daabsdk" do
   url node['daab']['daabsdk_zipfile_url']
   path node['daab']['install_dir']
