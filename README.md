@@ -41,10 +41,10 @@ Attributes
     <td><tt>baab</tt></td>
   </tr>
   <tr>
-    <td><tt>['daab']['daabsdk_zipfile_url']</tt></td>
+    <td><tt>['daab']['git_clone_url']</tt></td>
     <td>String</td>
     <td>Daab SDK zipfile url. </td>
-    <td><tt>https://direct4b.com/ja/bot/dev/samples/starter/starter-0.1.0.zip</tt></td>
+    <td><tt>https://github.com/lisb/daab-starter.git</tt></td>
   </tr>
 
 </table>
