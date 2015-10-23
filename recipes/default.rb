@@ -44,24 +44,19 @@ directory node['daab']['install_dir'] do
   mode 0755
 end
 
-include_recipe "zip"
-
-ark "daabsdk" do
-  url node['daab']['daabsdk_zipfile_url']
-  path node['daab']['install_dir']
-  owner node['daab']['user']
+git "#{node['daab']['install_dir']}/daab-starter" do
+  repository node['daab']['git_clone_url']
+  user node['daab']['user']
   group node['daab']['group']
-  strip_components 0
-
-  action :put
+  action :sync
   notifies :run, "execute[setup daabsdk]", :immediately
 end
 
 execute "setup daabsdk" do
-  cwd "#{node['daab']['install_dir']}/daabsdk"
+  cwd "#{node['daab']['install_dir']}/daab-starter"
   command <<-EOH
 npm install
-chown #{node['daab']['user']}:#{node['daab']['group']} -R #{node['daab']['install_dir']}/daabsdk
+chown #{node['daab']['user']}:#{node['daab']['group']} -R #{node['daab']['install_dir']}/daab-starter
   EOH
   action :nothing
 end
