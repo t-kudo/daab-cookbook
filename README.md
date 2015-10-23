@@ -26,19 +26,19 @@ Attributes
     <td><tt>['daab']['install_dir']</tt></td>
     <td>String</td>
     <td>Directry the Daab instance will be installed to.</td>
-    <td><tt>/opt/baab</tt></td>
+    <td><tt>/opt/daab</tt></td>
   </tr>
   <tr>
     <td><tt>['daab']['user']</tt></td>
     <td>String</td>
     <td>The user to install and run Daab instance under.</td>
-    <td><tt>baab</tt></td>
+    <td><tt>daab</tt></td>
   </tr>
   <tr>
     <td><tt>['daab']['group']</tt></td>
     <td>String</td>
     <td>The group to install and run Daab instance under. </td>
-    <td><tt>baab</tt></td>
+    <td><tt>daab</tt></td>
   </tr>
   <tr>
     <td><tt>['daab']['git_clone_url']</tt></td>
